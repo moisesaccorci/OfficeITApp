@@ -10,6 +10,7 @@ import Contact from '../screens/home/Contact';
 import Store from '../screens/store/Store';
 import Courses from '../screens/store/Courses';
 import Exam from '../screens/store/Exam';
+import Help from '../screens/Help/Help';
 import React, { useRef } from 'react';
 
 const Tab = createBottomTabNavigator();
@@ -20,7 +21,7 @@ const MyTheme = {
     colors: {
         primary: 'white',
         background: 'rgb(242, 242, 242)',
-        card: '#01458e',
+        card: '#0269A4',
         text: 'white',
         border: '#0769d3',
         notification: 'rgb(255, 69, 58)',
@@ -30,7 +31,7 @@ const MyTheme = {
 export default function Navigators() {
 
     return (
-        <NavigationContainer>
+        <NavigationContainer theme={MyTheme}>
             <HomeStack />
         </NavigationContainer>
     )
@@ -46,6 +47,7 @@ export const HomeStack = () => {
             <Stack.Screen name='Loja' component={Store} />
             <Stack.Screen name='Cursos' component={Courses} />
             <Stack.Screen name='Exames' component={Exam} />
+            <Stack.Screen name='Ajuda' component={Help} />
         </Stack.Navigator>
     )
 }

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Button } from 'react-native-paper';
+import { Button, IconButton } from 'react-native-paper';
 import { SafeAreaView, View, TouchableOpacity, Text, StyleSheet } from "react-native";
 import { call } from 'react-native-reanimated';
 import { WebView } from 'react-native-webview';
@@ -37,12 +37,8 @@ export default function Courses() {
         }}
       />
       <View style={styles.tabBarContainer}>
-        <Button icon="arrow-left-circle" mode='contained' onPress={backButtonHandler}>
-          Voltar
-        </Button>
-        <Button icon="arrow-right-circle" mode="contained" onPress={frontButtonHandler}>
-          Avançar
-        </Button>
+        <IconButton icon="arrow-left-circle" color={'#fff'} onPress={backButtonHandler} />
+        <IconButton icon="arrow-right-circle" color={'#fff'} onPress={frontButtonHandler} />
       </View>
 
     </>
@@ -57,7 +53,7 @@ const styles = StyleSheet.create({
   tabBarContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    backgroundColor: '#FFFFFF'
+    backgroundColor: '#0269A4'
 
   },
   button: {

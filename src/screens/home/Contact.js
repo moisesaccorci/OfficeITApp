@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Title, Paragraph, Button } from "react-native-paper";
 import { View, Text, SafeAreaView, StyleSheet, Image, Linking } from "react-native";
 
-const logo = require('../../../assets/logo.png')
+const logo = require('../../../assets/icon.png')
 
 export default function Contact() {
     return (
@@ -30,13 +30,15 @@ const styles = StyleSheet.create({
     TotalView: {
         flex: 1,
         alignItems: 'center',
+        backgroundColor: '#0387D2'
     },
 
     Button: {
-        backgroundColor: 'green',
+        backgroundColor: '#ffa500',
         color: '#FFFFFF',
         padding: 10,
         marginVertical: 25,
+        alignSelf: 'center'
     },
     Text: {
         color: 'white',
@@ -46,13 +48,15 @@ const styles = StyleSheet.create({
         marginBottom: 25, 
         fontWeight: 'bold', 
         marginHorizontal: 5,
+        color: '#fff'
     },
 
     Logo: {
         width: '80%',
         height: '100%',
         flex: 1,
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        marginTop: 25,
     },
 
     Container: {
@@ -60,6 +64,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         width: '100%',
         height: 100,
+        backgroundColor: '#0387D2',
     },
 
 })
