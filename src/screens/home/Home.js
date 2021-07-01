@@ -15,29 +15,23 @@ function Home({ navigation }) {
             </View>
 
             <ScrollView>
-                <Card style={styles.Card}>
-                    <Card.Content>
-                        <Title style={styles.Title}>Plataforma EAD</Title>
-                        <Paragraph>Acesse nossa plataforma EAD diretamente do nosso aplicativo para celulares.</Paragraph>
-                    </Card.Content>
-                    <Card.Actions>
-                        <Button onPress={() => navigation.navigate('Plataforma EAD')}>
-                            Acessar
-                        </Button>
-                    </Card.Actions>
-                </Card>
+                <TouchableOpacity onPress={() => navigation.navigate('Plataforma EAD')}>
+                    <Card style={styles.Card}>
+                        <Card.Content>
+                            <Title style={styles.Title}>Plataforma EAD</Title>
+                            <Paragraph style={styles.Paragraph}>Acesse nossa plataforma EAD diretamente do nosso aplicativo para celulares.</Paragraph>
+                        </Card.Content>
+                    </Card>
+                </TouchableOpacity>
 
-                <Card style={styles.Card}>
-                    <Card.Content>
-                        <Title style={styles.Title}>Loja</Title>
-                        <Paragraph>Acesse nossa loja e escolha as melhores ofertas para você!</Paragraph>
-                    </Card.Content>
-                    <Card.Actions>
-                        <Button onPress={() => navigation.navigate('Loja')}>
-                            Acessar
-                        </Button>
-                    </Card.Actions>
-                </Card>
+                <TouchableOpacity onPress={() => navigation.navigate('Loja')}>
+                    <Card style={styles.Card}>
+                        <Card.Content>
+                            <Title style={styles.Title}>Loja</Title>
+                            <Paragraph style={styles.Paragraph}>Acesse nossa loja e escolha as melhores ofertas para você!</Paragraph>
+                        </Card.Content>
+                    </Card>
+                </TouchableOpacity>
             </ScrollView>
 
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.BottomContainer}>
@@ -90,18 +84,25 @@ const styles = StyleSheet.create({
     },
 
     Title: {
-        textAlign: 'center'
+        textAlign: 'left',
+        color: '#fff',
+        fontWeight: 'bold',
     },
 
     Paragraph: {
         textAlign: 'center',
         marginHorizontal: 5,
+        color: '#fff',
+        fontSize: 16,
     },
 
     Card: {
         width: '90%',
+        height: 150,
         alignSelf: 'center',
+        justifyContent: 'center',
         marginBottom: 15,
+        backgroundColor: '#ffa500'
 
     },
 
@@ -114,7 +115,7 @@ const styles = StyleSheet.create({
     BottomCards: {
         width: 180,
         height: 180,
-        marginHorizontal: 15,
+        marginHorizontal: 10,
         backgroundColor: '#ffa500'
     },
 
